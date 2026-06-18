@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+.Navegation {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.Sourch {
+  margin-left: 370%;
+  margin-bottom: 4px;
+  border: none;
+  border: 2px solid rgb(74, 106, 177);
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  outline: none;
+}
+
+.Links {
+  text-decoration: none;
+  color: black;
+}
+.Links:hover {
+  border-bottom: 2px solid rgb(74, 106, 177);
+}
+.UserIcon {
+  width: 20px;
+}
+.Cart {
+  width: 20px;
+}
+.Submenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -30px;
+  list-style: none;
+  border: 1px solid rgb(74, 106, 177);
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+.Linkssubmenu {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.Linkssubmenu:hover {
+  color: rgb(74, 106, 177);
+  border-bottom: 1px solid rgb(74, 106, 177);
+}
+.Logo {
+  width: 8%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -50px;
+}
