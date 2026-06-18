@@ -1,2 +1,8 @@
-# Loja-de-carros
-🚗 Loja de Carros Full Stack desenvolvida com React, Node.js, Express e MongoDB. A plataforma permite visualizar veículos, pesquisar por filtros, acessar detalhes dos carros e gerenciar o catálogo através de um painel administrativo. Projeto focado em APIs REST, banco de dados, CRUD, responsividade e integração Full Stack.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
