@@ -6,7 +6,9 @@
   display: flex;
   gap: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(74, 106, 177);
+  border-radius: 2px;
+  z-index: 1100;
 }
 
 .Sourch {
@@ -40,11 +42,13 @@
   margin-top: 20px;
   margin-left: -30px;
   list-style: none;
-  border: 1px solid rgb(74, 106, 177);
+  border: 2px solid rgb(74, 106, 177);
   text-align: center;
   justify-content: center;
   padding: 20px;
   gap: 10px;
+  z-index: 1100;
+  background-color: aliceblue;
 }
 .Linkssubmenu {
   text-decoration: none;
