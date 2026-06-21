@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.Cards {
+  width: 100%;
+  padding: 70px 60px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.Card1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 45px;
+}
+
+/* ===========================
+   IMAGEM PRINCIPAL
+=========================== */
+
+.ImageContainer:first-child {
+  width: 620px;
+  height: 360px;
+  flex-shrink: 0;
+}
+
+.ImageContainer:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+
+.ImageContainer:first-child:hover img {
+  transform: scale(1.04);
+}
+
+/* ===========================
+   CONTEÚDO DIREITO
+=========================== */
+
+.InfoSedan {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   TÍTULO
+=========================== */
+
+.Tittle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: black;
+
+  border-bottom: 2px solid rgb(74, 106, 177);
+
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   TEXTO
+=========================== */
+
+.TextSedan {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: black;
+
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   BOTÃO
+=========================== */
+
+.btn-modelo {
+  width: fit-content;
+
+  padding: 14px 30px;
+
+  background: rgb(50, 116, 192);
+  color: white;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  margin-bottom: 35px;
+}
+
+.btn-modelo:hover {
+  background: rgb(34, 87, 155);
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   SEGUNDA IMAGEM
+=========================== */
+
+.Modelosedan .ImageContainer {
+  width: 390px;
+  height: 220px;
+}
+
+.Modelosedan img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition: 0.5s;
+}
+
+.Modelosedan:hover img {
+  transform: scale(1.04);
+}
+
+/*
+  ===========================
+  SEGUNDA
+  IMAGEM
+  ===========================
+  */
+.Modelosedan2 .ImageContainer {
+  width: 390px;
+  height: 220px;
+}
+
+.Modelosedan2 img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition: 0.5s;
+}
+
+.Modelosedan2:hover img {
+  transform: scale(1.04);
+}
+
+/* ===========================
+   SOMBRA NAS IMAGENS
+=========================== */
+
+.ImageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.ImageContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ImageContainer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================
+   PRÓXIMOS CARDS
+=========================== */
+
+.Card2,
+.Card3 {
+  margin-top: 80px;
+}
+.Card1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.ImageContainer:first-child {
+  width: 520px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.InfoSedan {
+  width: 520px;
+}
+
+.Modelosedan {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.Modelosedan .ImageContainer {
+  width: 100%;
+  height: 320px;
+}
+.Modelosedan2 {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.Modelosedan2 .ImageContainer {
+  width: 100%;
+  height: 320px;
+}
+.Cardssedan {
+  display: flex;
+  gap: 60px;
+}
+.Boxsedan {
+  display: flex;
+}
+.Boxsedan img {
+  width: 70%;
+  margin-left: -550px;
+  margin-top: -250%;
+  margin-bottom: 360px;
+  border-right: 1px solid rgb(34, 87, 155);
+  padding-right: 40px;
+}
+.Textboxsedan {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 500px;
+  font-size: 10px;
+  margin-left: -110%;
+  margin-top: -60%;
+  border-top: 1px solid rgb(34, 87, 155);
+}
