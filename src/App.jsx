@@ -1,16 +1,22 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import FeaturedCars from "./components/FeaturedCars/FeaturedCars";
-import FeaturedModels from "./components/FeaturedModels/FeaturedModels";
+import Footer from "./components/Footer/Footer";
+
+import Home from "./pages/Home/Home";
+import Catalogo from "./pages/Catalogo/Catalogo";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Hero />
-      <FeaturedCars />
-      <FeaturedModels />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalogo" element={<Catalogo />} />
+      </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }

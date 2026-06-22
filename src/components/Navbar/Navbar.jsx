@@ -33,7 +33,7 @@ function Navbar() {
         </li>
 
         <li onMouseEnter={abrirSubmenu} onMouseLeave={fecharSubmenu}>
-          <Link className="Links" to="/modelos">
+          <Link className="Links" to="/Catalogo">
             Modelos
           </Link>
 
