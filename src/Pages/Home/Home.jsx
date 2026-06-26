@@ -1,13 +1,13 @@
 import Hero from "../../components/Hero/Hero";
-import FeaturedCars from "../../components/FeaturedCars/FeaturedCars";
 import FeaturedModels from "../../components/FeaturedModels/FeaturedModels";
+import Featuredcars from "../../components/FeaturedCars/FeaturedCars";
 
 function Home() {
   return (
     <>
       <Hero />
-      <FeaturedCars />
       <FeaturedModels />
+      <Featuredcars />
     </>
   );
 }

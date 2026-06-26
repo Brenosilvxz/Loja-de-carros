@@ -1,26 +1,11 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
 
 import logo from "../../assets/logo.png";
 import userIcon from "../../assets/user.svg";
 import iconCart from "../../assets/cart.svg";
 
 function Navbar() {
-  const [submenuAberto, setSubmenuAberto] = useState(false);
-  const timeoutRef = useRef(null);
-
-  const abrirSubmenu = () => {
-    clearTimeout(timeoutRef.current);
-    setSubmenuAberto(true);
-  };
-
-  const fecharSubmenu = () => {
-    timeoutRef.current = setTimeout(() => {
-      setSubmenuAberto(false);
-    }, 250);
-  };
-
   return (
     <div className="Navbar">
       <img src={logo} alt="Logo MeeCars" className="Logo" />
@@ -32,57 +17,10 @@ function Navbar() {
           </Link>
         </li>
 
-        <li onMouseEnter={abrirSubmenu} onMouseLeave={fecharSubmenu}>
+        <li>
           <Link className="Links" to="/Catalogo">
             Modelos
           </Link>
-
-          {submenuAberto && (
-            <ul
-              className="Submenu"
-              onMouseEnter={abrirSubmenu}
-              onMouseLeave={fecharSubmenu}
-            >
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/sedans">
-                  Sedans
-                </Link>
-              </li>
-
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/esportivos">
-                  Esportivos
-                </Link>
-              </li>
-
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/eletricos">
-                  Elétricos
-                </Link>
-              </li>
-
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/picapes">
-                  Picapes
-                </Link>
-              </li>
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/suvs">
-                  SUVs
-                </Link>
-              </li>
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/hibridos">
-                  Híbridos
-                </Link>
-              </li>
-              <li>
-                <Link className="Linkssubmenu" to="/modelos/luxo">
-                  Luxo
-                </Link>
-              </li>
-            </ul>
-          )}
         </li>
 
         <li>
