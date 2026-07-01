@@ -1,15 +1,12 @@
 const express = require("express");
-
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Projeto backend");
-});
+const carrosRoutes = require("./routes/CarrosRoutes");
 
-app.get('/carros', (req, res) => {
-    res.send('Voçê está no catalógo de carros')
-});
+app.use(express.json());
+
+app.use("/carros", carrosRoutes);
 
 app.listen(3000, () => {
-  console.log("Servidor rodando...");
+  console.log("Servidor rodando na porta 3000");
 });
