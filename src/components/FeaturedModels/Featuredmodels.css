@@ -16,7 +16,35 @@
   height: 20%;
   border-radius: 10px;
   box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.247);
+  position: relative;
 }
 .images img:hover {
   transform: translateX();
+}
+.Textimages {
+  position: absolute;
+  display: flex;
+  gap: 200px;
+  justify-content: space-between;
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.Textbmw {
+  margin-top: -300px;
+  margin-left: 150px;
+}
+.Textbmw p {
+  margin-top: -20px;
+}
+.TextMclaren p {
+  margin-top: -20px;
+}
+.Link {
+  text-decoration: none;
+  color: aliceblue;
+  border-bottom: 1px solid white;
+}
+.TextMclaren {
+  margin-top: -300px;
+  margin-left: -40px;
 }
