@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import userIcon from "../../assets/user.svg";
 import iconCart from "../../assets/cart.svg";
+import iconLocalizacao from "../../assets/localizacao.svg";
 
 function Navbar() {
   return (
@@ -54,11 +55,12 @@ function Navbar() {
         </li>
 
         <li>
-          <input
-            type="text"
-            placeholder="Buscar veículos..."
-            className="Sourch"
-          />
+          <Link className="Links" to="/localize">
+            <div className="Sourch">
+              <img src={iconLocalizacao} alt="Localizar" className="Local" />
+              <h3>Localize perto de voçê</h3>
+            </div>
+          </Link>
         </li>
       </ul>
     </div>
