@@ -1,11 +1,9 @@
+const carrosController = require("../Controllers/Carroscontrollers");
 const express = require("express");
-
 const router = express.Router();
 
-const carros = require("../Data/Carros");
-
-router.get("/", (req, res) => {
-  res.json(carros);
-});
+router.get("/", carrosController.listarCarros);
+router.get("/:id", carrosController.buscarCarro);
+router.post("/", carrosController.adicionarCarro);
 
 module.exports = router;

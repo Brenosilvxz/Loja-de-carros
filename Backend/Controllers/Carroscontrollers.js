@@ -70,18 +70,26 @@ function adicionarCarro(req, res) {
     ],
     (erro, result) => {
       if (erro) {
+        console.log(erro);
         return res.status(500).json({
           mensagem: "erro ao cadastrar o carro",
         });
       }
-
-      res.json(result);
+      return res.status(201).json({
+        mensagem: "Carro cadastrado com sucesso!",
+        id: result.insertid,
+      });
     },
   );
+}
+
+funciton editarCarro(req,res) {
+  
 }
 
 module.exports = {
   listarCarros,
   buscarCarro,
   adicionarCarro,
+  editarCarro,
 };
