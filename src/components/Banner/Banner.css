@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.Banner {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.Banner1 {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  margin-top: 35px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.Banner1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.Banner1:hover img {
+  transform: scale(1.05);
+}
+
+/* Escurece levemente a imagem */
+.Banner1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.15) 30%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+.Banner1 h1 {
+  position: absolute;
+  top: 70px;
+  right: 120px;
+  z-index: 2;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 75px;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+.Banner1 h2 {
+  position: absolute;
+  top: 170px;
+  right: 120px;
+  z-index: 2;
+
+  width: 250px;
+
+  color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.Linkss {
+  position: absolute;
+  top: 300px;
+  right: 120px;
+  z-index: 2;
+
+  width: 180px;
+  padding: 14px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.05);
+
+  transition: 0.35s ease;
+}
+
+.Linkss:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}

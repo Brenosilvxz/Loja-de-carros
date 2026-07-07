@@ -77,14 +77,85 @@ function adicionarCarro(req, res) {
       }
       return res.status(201).json({
         mensagem: "Carro cadastrado com sucesso!",
-        id: result.insertid,
+        id: result.insertId,
       });
     },
   );
 }
 
-funciton editarCarro(req,res) {
-  
+function editarCarro(req, res) {
+  const { id } = req.params;
+  const dados = req.body;
+
+  db.query(
+    `UPDATE carros SET  
+        nome = ?,
+        marca = ?,
+        modelo = ?,
+        ano = ?,
+        cor = ?,
+        combustivel  = ?,
+        cambio  = ?,
+        quilometragem  = ?,
+        potencia  = ?,
+        preco  = ?,
+        descricao  = ?,
+        imagem  = ? 
+        WHERE id = ?`,
+
+    [
+      dados.nome,
+      dados.marca,
+      dados.modelo,
+      dados.ano,
+      dados.cor,
+      dados.combustivel,
+      dados.cambio,
+      dados.quilometragem,
+      dados.potencia,
+      dados.preco,
+      dados.descricao,
+      dados.imagem,
+      id,
+    ],
+    (erro, result) => {
+      if (erro) {
+        console.log(erro);
+        return res.status(500).json({
+          mensagem: "Erro ao editar carro",
+        });
+      }
+      if (result.affectedRows === 0) {
+        return res.status(404).json({
+          mensagem: "Carro não encontrado",
+        });
+      }
+      res.json({
+        mensagem: "Carro atualizado com sucesso!",
+      });
+    },
+  );
+}
+
+function deletarCarro(req, res) {
+  const { id } = req.params;
+  db.query(`DELETE FROM carros WHERE id = ?`, [id], (erro, result) => {
+    if (erro) {
+      console.log(erro);
+      return res.status(500).json({
+        mensagem: "Erro ao deletar carro",
+      });
+    }
+      if (result.affectedRows === 0) {
+        return res.status(404).json({
+          mensagem: "Carro não encontrado",
+        });
+      }
+      res.json({
+        mensagem:"Carro deletado com sucesso!"
+      });
+    },
+  );
 }
 
 module.exports = {
@@ -92,4 +163,5 @@ module.exports = {
   buscarCarro,
   adicionarCarro,
   editarCarro,
+  deletarCarro,
 };

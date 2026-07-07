@@ -10,24 +10,34 @@ function FeaturedModels() {
       <div className="Tittle">
         <h1>Descubra os novos modelos que chegaram na loja!</h1>
       </div>
+
       <div className="images">
-        <img src={bmw} />
-        <img src={mclaren} />
-      </div>
-      <div className="Textimages">
-        <div className="Textbmw">
-          <h2>Nova BMW disponível no nosso catálogo</h2>
-          <p>Veja detalhes inéditos do nosso novo modelo!</p>
-          <Link className="Link" to="/bmw-novo-modelo">
-            Acesse aqui
-          </Link>
+        <div className="CardImage">
+          <img src={bmw} alt="BMW" />
+
+          <div className="Text">
+            <h2>Nova BMW disponível no nosso catálogo</h2>
+
+            <p>Veja detalhes inéditos do nosso novo modelo!</p>
+
+            <Link className="Link" to="/bmw-novo-modelo">
+              Acesse aqui
+            </Link>
+          </div>
         </div>
-        <div className="TextMclaren">
-          <h2>McLaren uníca do catálogo</h2>
-          <p>Homenagem a uma lenda!</p>
-          <Link className="Link" to="/Mclaren-novo-modelo">
-            Acesse aqui
-          </Link>
+
+        <div className="CardImage">
+          <img src={mclaren} alt="McLaren" />
+
+          <div className="Text">
+            <h2>McLaren única do catálogo</h2>
+
+            <p>Homenagem a uma lenda!</p>
+
+            <Link className="Link" to="/mclaren-novo-modelo">
+              Acesse aqui
+            </Link>
+          </div>
         </div>
       </div>
     </section>
