@@ -9,6 +9,8 @@ app.use(cors());
 
 app.use("/carros", carrosRoutes);
 
+app.use("/uploads", express.static("uploads"));
+
 app.listen(3000, () => {
   console.log("Servidor rodando na porta 3000");
 });

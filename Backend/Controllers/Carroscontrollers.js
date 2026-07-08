@@ -38,6 +38,11 @@ function buscarCarro(req, res) {
 // adicionar carro
 function adicionarCarro(req, res) {
   const dados = req.body;
+  const imagem = req.file ? req.file.filename : null;
+
+  console.log(dados);
+  console.log(req.file);
+  console.log("Imagem:", imagem);
 
   db.query(
     `INSERT INTO carros (
@@ -66,7 +71,7 @@ function adicionarCarro(req, res) {
       dados.potencia,
       dados.preco,
       dados.descricao,
-      dados.imagem,
+      imagem,
     ],
     (erro, result) => {
       if (erro) {
@@ -146,16 +151,15 @@ function deletarCarro(req, res) {
         mensagem: "Erro ao deletar carro",
       });
     }
-      if (result.affectedRows === 0) {
-        return res.status(404).json({
-          mensagem: "Carro não encontrado",
-        });
-      }
-      res.json({
-        mensagem:"Carro deletado com sucesso!"
+    if (result.affectedRows === 0) {
+      return res.status(404).json({
+        mensagem: "Carro não encontrado",
       });
-    },
-  );
+    }
+    res.json({
+      mensagem: "Carro deletado com sucesso!",
+    });
+  });
 }
 
 module.exports = {
