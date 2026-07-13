@@ -7,6 +7,8 @@ import Home from "./pages/Home/Home";
 
 import Catalogo from "./Pages/Catalogo/Catalogo";
 
+import Detalhes from "./Pages/Detalhes/Detalhes";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/carros/:id" element={<Detalhes />} />
       </Routes>
 
       <Footer />
