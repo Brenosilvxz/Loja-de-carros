@@ -65,34 +65,3 @@
   font-size: 17px;
   line-height: 28px;
 }
-
-.Linkss {
-  position: absolute;
-  top: 300px;
-  right: 120px;
-  z-index: 2;
-
-  width: 180px;
-  padding: 14px;
-
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-  color: white;
-
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.05);
-
-  transition: 0.35s ease;
-}
-
-.Linkss:hover {
-  background: white;
-  color: black;
-  border-color: white;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}

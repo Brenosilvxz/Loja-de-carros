@@ -9,34 +9,18 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   margin-left: 50px;
-}
-
-.Banners {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: sticky;
-  top: 20px;
-  margin-left: 80%;
-  margin-top: -80%;
-  margin-bottom: 300px;
-}
-
-.Banners img {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
 }
 
 .Tittlee {
   margin: 30px 0 20px 55px;
+  display: flex;
+  justify-content: center;
 }
 
 .Card {
-  width: 320px;
+  width: 300px;
   background: #161616;
   border-radius: 15px;
   overflow: hidden;
@@ -94,4 +78,49 @@
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #fff;
+}
+.Actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.Favorite {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #202020;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Favorite:hover {
+  background: #ff3b5c;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 59, 92, 0.4);
+}
+
+.Favorite:active {
+  transform: scale(0.95);
+}
+
+.Details {
+  text-decoration: none;
+  color: #fff;
+  background: #2196f3;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.Details:hover {
+  background: #1976d2;
 }

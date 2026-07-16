@@ -1,5 +1,5 @@
 import "./Hero.css";
-import car from "../../assets/hero.jpg";
+import car from "../../assets/car-home.mp4";
 
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-image">
-        <img src={car} alt="BMW M4" />
+        <video src={car} autoPlay loop muted playsInline />
       </div>
 
       <div className="Texts">
@@ -15,12 +15,12 @@ function Hero() {
         <p>Veículos premium com qualidade, segurança e desempenho.</p>
 
         <div className="hero-buttons">
-          <Link to="/modelos" className="btn-primary">
+          <Link to="/Catalogo" className="btn-primary">
             Explorar Modelos
           </Link>
 
-          <Link to="/ofertas" className="btn-secondary">
-            Ver Ofertas
+          <Link to="/destaques" className="btn-secondary">
+            Ver Destaques
           </Link>
         </div>
       </div>

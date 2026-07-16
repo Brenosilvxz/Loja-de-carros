@@ -20,7 +20,7 @@ function FeaturedModels() {
 
             <p>Veja detalhes inéditos do nosso novo modelo!</p>
 
-            <Link className="Link" to="/bmw-novo-modelo">
+            <Link className="Link" to="/Catalogo">
               Acesse aqui
             </Link>
           </div>
@@ -34,7 +34,7 @@ function FeaturedModels() {
 
             <p>Homenagem a uma lenda!</p>
 
-            <Link className="Link" to="/mclaren-novo-modelo">
+            <Link className="Link" to="/Catalogo">
               Acesse aqui
             </Link>
           </div>

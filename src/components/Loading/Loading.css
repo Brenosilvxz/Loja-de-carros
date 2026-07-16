@@ -1,0 +1,100 @@
+.Loading {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.Loading.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Loading-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  animation: zoom 3s ease forwards;
+}
+
+.Overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.Loading-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+}
+
+.Loading-content img {
+  width: 220px;
+  animation: logo 2s ease;
+}
+
+.Loading-content p {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: texto 1.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes texto {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

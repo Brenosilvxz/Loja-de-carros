@@ -1,12 +1,39 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Catalogo.css";
-import { Link } from "react-router-dom";
-import Banner from "../../assets/banner.png";
-import Banner1 from "../../assets/banner.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function Catalogo() {
   const [carros, setCarros] = useState([]);
+
+  const navigate = useNavigate();
+  async function favoritar(id) {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+
+    try {
+      await axios.post(
+        "http://localhost:3000/favoritos",
+        {
+          carro_id: id,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      alert("Carro favoritado!");
+    } catch (erro) {
+      alert("Erro ao favoritar o carro.");
+      console.error(erro);
+    }
+  }
 
   useEffect(() => {
     axios.get("http://localhost:3000/carros").then((resposta) => {
@@ -35,16 +62,21 @@ function Catalogo() {
 
               <h3>R$ {Number(carro.preco).toLocaleString("pt-BR")}</h3>
 
-              <Link className="Details" to={`/carros/${carro.id}`}>
-                Ver detalhes 🔎
-              </Link>
+              <div className="Actions">
+                <Link className="Details" to={`/carros/${carro.id}`}>
+                  Ver detalhes 🔎
+                </Link>
+
+                <button
+                  className="Favorite"
+                  onClick={() => favoritar(carro.id)}
+                >
+                  🤍
+                </button>
+              </div>
             </div>
           </div>
         ))}
-      </div>
-      <div className="Banners">
-        <img src={Banner} alt="" />
-        <img src={Banner1} alt="" />
       </div>
     </section>
   );

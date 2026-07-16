@@ -25,12 +25,6 @@ function Navbar() {
         </li>
 
         <li>
-          <Link className="Links" to="/ofertas">
-            Ofertas
-          </Link>
-        </li>
-
-        <li>
           <Link className="Links" to="/destaques">
             Destaques
           </Link>
@@ -43,14 +37,14 @@ function Navbar() {
         </li>
 
         <li>
-          <Link className="Links" to="/perfil">
-            <img src={userIcon} alt="Perfil" className="UserIcon" />
+          <Link className="Links" to="/favoritos">
+            ❤️ Favoritos
           </Link>
         </li>
 
         <li>
-          <Link className="Links" to="/cart">
-            <img src={iconCart} alt="Carrinho" className="Cart" />
+          <Link className="Links" to="/login">
+            <img src={userIcon} alt="Perfil" className="UserIcon" />
           </Link>
         </li>
 
