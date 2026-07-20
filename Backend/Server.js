@@ -8,6 +8,8 @@ const usuariosRoutes = require("./Routes/Usuarios");
 
 const favoritosRoutes = require("./Routes/Favoritos");
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 // Middlewares
@@ -22,6 +24,6 @@ app.use("/favoritos", favoritosRoutes);
 // Arquivos estáticos
 app.use("/uploads", express.static("uploads"));
 
-app.listen(3000, () => {
-  console.log("Servidor rodando na porta 3000");
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
