@@ -241,3 +241,214 @@
   background: #fff;
   color: #000;
 }
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .ImagemCarrossel {
+    height: 400px;
+  }
+
+  .Info {
+    padding: 30px;
+  }
+
+  .Info h2 {
+    font-size: 2rem;
+  }
+
+  .Video {
+    height: 500px;
+  }
+
+  .Video-content h1 {
+    font-size: 3rem;
+  }
+
+  .Encontre-text {
+    font-size: 40px;
+  }
+
+  .Cards-ofertas {
+    margin-left: 20px;
+  }
+}
+
+/* TABLET / CELULAR GRANDE */
+@media (max-width: 768px) {
+  .ImagemCarrossel {
+    height: 300px;
+  }
+
+  .Info {
+    padding: 20px;
+  }
+
+  .Info h2 {
+    font-size: 1.5rem;
+  }
+
+  .Buttons {
+    gap: 15px;
+  }
+
+  .Buttons button {
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .Cards-ofertas {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Card-ofertas img {
+    width: 100%;
+  }
+
+  .Two {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .Desc {
+    width: 90px;
+    font-size: 9px;
+    margin-left: 20px;
+  }
+
+  .Tittle-cards {
+    font-size: 1.1rem;
+    width: 120px;
+    margin-left: 20px;
+  }
+
+  .Text-cards {
+    font-size: 0.8rem;
+    margin-bottom: 50px;
+    display: flex;
+    text-align: center;
+    margin-left: 45px;
+  }
+
+  .Encontre img {
+    height: 250px;
+  }
+
+  .Encontre-text {
+    top: 35%;
+    left: 50%;
+    width: 90%;
+    font-size: 30px;
+  }
+
+  .Encontre-link {
+    top: 70%;
+    left: 50%;
+    padding: 12px 25px;
+  }
+
+  .Video {
+    height: 400px;
+  }
+
+  .Video-content {
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+  }
+
+  .Video-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .Video-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .Video-btn {
+    padding: 12px 25px;
+  }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+  .ImagemCarrossel {
+    height: 220px;
+  }
+
+  .Info {
+    padding: 15px;
+  }
+
+  .Info h2 {
+    font-size: 1.2rem;
+  }
+
+  .Buttons button {
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .Cards-ofertas {
+    margin-top: 30px;
+  }
+
+  .Desc {
+    width: 90px;
+    font-size: 9px;
+    margin-left: 20px;
+  }
+
+  .Tittle-cards {
+    font-size: 1.1rem;
+    width: 120px;
+    margin-left: 20px;
+  }
+
+  .Text-cards {
+    font-size: 0.8rem;
+    margin-bottom: 50px;
+    display: flex;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .Encontre img {
+    height: 200px;
+  }
+
+  .Encontre-text {
+    font-size: 22px;
+  }
+
+  .Encontre-link {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .Video {
+    height: 320px;
+  }
+
+  .Video-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .Video-content p {
+    display: none;
+  }
+
+  .Video-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
