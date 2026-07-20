@@ -52,7 +52,7 @@ function Navbar() {
           <Link className="Links" to="/localize">
             <div className="Sourch">
               <img src={iconLocalizacao} alt="Localizar" className="Local" />
-              <h3>Localize perto de voçê</h3>
+              <h3>Localize perto de você</h3>
             </div>
           </Link>
         </li>

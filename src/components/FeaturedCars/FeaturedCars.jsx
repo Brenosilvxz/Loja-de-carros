@@ -1,37 +1,50 @@
 import "./FeaturedCars.css";
 import { Link } from "react-router-dom";
+
 import bmw from "../../assets/bmw-models.jpg";
-// import audi from "../../assets/audi-models.jpg";
 import porsche from "../../assets/porsche-models.jpg";
 
 function FeaturedCars() {
   return (
-    <section className="Models">
-      <div className="Tittle">
-        <h1>Modelos mais buscados</h1>
-      </div>
-      <div className="Cards">
-        <div className="Card1">
-          <img src={bmw} alt="bmw" />
+    <section className="featured-models">
+      <div className="featured-header">
+        <span>Modelos Premium</span>
 
-          <Link className="h2" to="/">
-            BMW M3
-          </Link>
+        <h2>Os carros mais desejados</h2>
+
+        <p>
+          Descubra alguns dos veículos esportivos e de luxo mais procurados da
+          nossa coleção.
+        </p>
+      </div>
+
+      <div className="featured-grid">
+        <div className="featured-card">
+          <img src={bmw} alt="BMW M3" />
+
+          <div className="featured-overlay">
+            <span>BMW</span>
+
+            <h3>BMW M3 Competition</h3>
+
+            <Link to="/catalogo">Explorar →</Link>
+          </div>
         </div>
-        {/* <div className="Card1">
-          <img src={audi} alt="bmw" />
-          <Link className="h2" to="/">
-            Audi R8
-          </Link>
-        </div> */}
-        <div className="Card1">
-          <img src={porsche} alt="bmw" />
-          <Link className="h2" to="/">
-            Porsche 911
-          </Link>
+
+        <div className="featured-card">
+          <img src={porsche} alt="Porsche 911" />
+
+          <div className="featured-overlay">
+            <span>Porsche</span>
+
+            <h3>Porsche 911 Turbo S</h3>
+
+            <Link to="/catalogo">Explorar →</Link>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 export default FeaturedCars;
