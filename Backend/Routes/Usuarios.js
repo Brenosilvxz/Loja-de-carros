@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const usuariosController = require("../Controllers/Usuarioscontrollers");
-require("../Middlewares/Auth");
-
+const auth = require("../Middlewares/Auth");
 // Cadastro
 router.post("/", usuariosController.cadastrar);
 
