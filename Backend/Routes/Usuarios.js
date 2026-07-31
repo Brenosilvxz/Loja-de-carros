@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const usuariosController = require("../Controllers/UsuariosControllers");
+const usuariosController = require("../Controllers/Usuarioscontrollers");
 const auth = require("../middlewares/Auth");
 
 // Cadastro
