@@ -9,11 +9,11 @@ import Home from "./pages/Home/Home";
 import Catalogo from "./Pages/Catalogo/Catalogo";
 import Detalhes from "./Pages/Detalhes/Detalhes";
 import Destaques from "./Pages/Destaques/Destaques";
-import Localize from "./pages/Localize/Localize";
-import Sobre from "./pages/Sobre/Sobre";
-import Login from "./pages/Login/Login";
-import Cadastro from "./pages/Cadastro/Cadastro";
-import Favoritos from "./pages/Favoritos/Favoritos";
+import Localize from "./Pages/Localize/Localize";
+import Sobre from "./Pages/Sobre/Sobre";
+import Login from "./Pages/Login/Login";
+import Cadastro from "./Pages/Cadastro/Cadastro";
+import Favoritos from "./Pages/Favoritos/Favoritos";
 
 function App() {
   const [loading, setLoading] = useState(true);
