@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/Loading/Loading";
 
-import Home from "./pages/Home/Home";
+import Home from "./Pages/Home/Home";
 import Catalogo from "./Pages/Catalogo/Catalogo";
 import Detalhes from "./Pages/Detalhes/Detalhes";
 import Destaques from "./Pages/Destaques/Destaques";
